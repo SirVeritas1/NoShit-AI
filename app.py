@@ -1,7 +1,8 @@
 from transformers import pipeline
 
 # Load a pre-trained model for text generation
-model = pipeline("text-generation", model="gpt2")
+model = pipeline("text-generation", model="EleutherAI/gpt-neo-2.7B")
+
 
 # A simple command-line interface to interact with NoShit AI
 def chat():
