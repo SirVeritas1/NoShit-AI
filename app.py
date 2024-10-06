@@ -8,9 +8,13 @@ def chat():
     print("Welcome to NoShit AI. Type your message below:")
     while True:
         user_input = input("> ")
+        
+        # If user wants to quit
         if user_input.lower() in ['quit', 'exit']:
             print("Goodbye!")
             break
+
+        # Generate the AI response without restrictions
         response = model(user_input, max_length=100, do_sample=True)
         print(f"NoShit: {response[0]['generated_text']}")
 
